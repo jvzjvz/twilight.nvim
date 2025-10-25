@@ -59,21 +59,62 @@ local c10 = hsl("#fe5f55")
 local c11 = hsl("#A6A867")
 local c12 = hsl("#1B2021")
 
-local c18 = hsl("#1789FC")
 local c13 = hsl("#E55934")
 local c14 = hsl("#E1CA96")
 local c15 = hsl("#ACA885")
 local c16 = hsl("#918B76")
 local c17 = hsl("#3E363F")
+local c18 = hsl("#1789FC")
 
--- local c6 = hsl("#A9D3FF")
+local c19 = hsl("#FDE12D")
+local c20 = hsl("#FFF3F0")
+local c21 = hsl("#F487B6")
+local c22 = hsl("#CC59D2")
+local c23 = hsl("#9046CF")
+
+local c24 = hsl("#A9D3FF")
+local c25 = hsl("#E84855")
+local c26 = hsl("#4A6FA5")
+
+local c27 = hsl("#5BC0EB")
+local c28 = hsl("#FDE74C")
+local c29 = hsl("#9BC53D")
+local c30 = hsl("#C3423F")
+local c31 = hsl("#211A1E")
+
+-- local c19 = hsl('#607466')
+-- local c19 = hsl('#41BBD9')
+-- local c19 = hsl('#99C24D')
+-- local c19 = hsl('#24272B')
+-- local c19 = hsl('#004BA8')
+-- local c19 = hsl('#4A525A')
+-- local c19 = hsl('#355070')
+-- local c19 = hsl('#533E2D')
+-- local c19 = hsl('#13262F')
+-- local c19 = hsl('#32CBFF')
+-- local c19 = hsl('#776258')
+-- local c19 = hsl('#6F73D2')
+-- local c19 = hsl('#83C9F4')
+-- local c19 = hsl('#53687E')
+-- local c19 = hsl('#141204')
+-- local c19 = hsl('#262A10')
+-- local c19 = hsl('#23395B')
+-- local c19 = hsl('#406E8E')
+--
 --
 -- local c6 = hsl("#96C5F7")
--- local c6 = hsl("#E84855")
 --
 -- local c6 = hsl("#BE92A2")
 -- local c6 = hsl("#FF1B1C")
--- local c17 = hsl("#")
+-- local c17 = hsl("#E0FF4F")
+-- local c18 = hsl('#FFFFFC')
+-- local c18 = hsl('#BEB7A4')
+-- local c18 = hsl('#FF7F11')
+-- local c18 = hsl('#0B3954')
+-- local c18 = hsl('#232ED1')
+-- local c18 = hsl('#101D42')
+-- local c18 = hsl('#0D1317')
+-- local c18 = hsl('#')
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
@@ -126,7 +167,7 @@ local theme = lush(function(injected_functions)
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Normal({ bg = c12 }), -- Normal text
+		-- Normal({ bg = c12 }), -- Normal text
 		-- NormalFloat    { }, -- Normal text in floating windows.
 		-- FloatBorder    { }, -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
@@ -172,21 +213,21 @@ local theme = lush(function(injected_functions)
 
 		-- Comment        { }, -- Any comment
 
-		-- Constant       { }, -- (*) Any constant
+		Constant({ fg = c14 }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		-- Identifier     { }, -- (*) Any variable name
-		-- Function       { }, --   Function name (also: methods for classes)
+		Identifier({ fg = c14 }), -- (*) Any variable name
+		Function({ fg = c14 }), --   Function name (also: methods for classes)
 
-		-- Statement      { }, -- (*) Any statement
+		Statement({ fg = c14 }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
-		-- Operator       { }, --   "sizeof", "+", "*", etc.
+		Operator({ fg = c14 }), --   "sizeof", "+", "*", etc.
 		-- Keyword        { }, --   any other keyword
 		-- Exception      { }, --   try, catch, throw
 
@@ -196,15 +237,15 @@ local theme = lush(function(injected_functions)
 		-- Macro          { }, --   Same as Define
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-		-- Type           { }, -- (*) int, long, char, etc.
+		Type({ fg = c14 }), -- (*) int, long, char, etc.
 		-- StorageClass   { }, --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		-- Special        { }, -- (*) Any special symbol
+		Special({ fg = c14 }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
-		-- Delimiter      { }, --   Character that needs attention
+		Delimiter({ fg = c14 }), --   Character that needs attention
 		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
