@@ -46,6 +46,7 @@ local lush = require("lush")
 local hsl = lush.hsl
 
 -- colors
+local c0 = hsl("#000000")
 local c1 = hsl("#302F4D")
 local c2 = hsl("#120d31")
 local c3 = hsl("#a6b1e1")
@@ -82,24 +83,54 @@ local c29 = hsl("#9BC53D")
 local c30 = hsl("#C3423F")
 local c31 = hsl("#211A1E")
 
--- local c19 = hsl('#607466')
--- local c19 = hsl('#41BBD9')
--- local c19 = hsl('#99C24D')
--- local c19 = hsl('#24272B')
--- local c19 = hsl('#004BA8')
--- local c19 = hsl('#4A525A')
--- local c19 = hsl('#355070')
--- local c19 = hsl('#533E2D')
--- local c19 = hsl('#13262F')
--- local c19 = hsl('#32CBFF')
--- local c19 = hsl('#776258')
--- local c19 = hsl('#6F73D2')
--- local c19 = hsl('#83C9F4')
--- local c19 = hsl('#53687E')
--- local c19 = hsl('#141204')
--- local c19 = hsl('#262A10')
--- local c19 = hsl('#23395B')
--- local c19 = hsl('#406E8E')
+local c31 = hsl("#107E7D")
+local c32 = hsl("#607466")
+local c33 = hsl("#41BBD9")
+local c34 = hsl("#99C24D")
+local c35 = hsl("#24272B")
+local c36 = hsl("#004BA8")
+local c37 = hsl("#4A525A")
+local c38 = hsl("#355070")
+local c39 = hsl("#533E2D")
+local c40 = hsl("#13262F")
+local c41 = hsl("#32CBFF")
+local c42 = hsl("#776258")
+local c43 = hsl("#6F73D2")
+local c44 = hsl("#83C9F4")
+local c45 = hsl("#53687E")
+local c46 = hsl("#141204")
+local c47 = hsl("#262A10")
+local c48 = hsl("#23395B")
+local c49 = hsl("#406E8E")
+local c50 = hsl("#B3C0A4")
+local c51 = hsl("#90F1EF")
+local c52 = hsl("#77AF9C")
+local c53 = hsl("#1B998B")
+local c54 = hsl("#58A4B0")
+local c55 = hsl("#BAC1B8")
+local c56 = hsl("#84A9C0")
+local c57 = hsl("#6A66A3")
+local c58 = hsl("#B68F40")
+local c59 = hsl("#A5978B")
+local c60 = hsl("#C4BBAF")
+local c61 = hsl("#5C4742")
+local c62 = hsl("#8D5B4C")
+local c63 = hsl("#587B7F")
+local c64 = hsl("#F3F9D2")
+local c65 = hsl("#7F96FF")
+local c66 = hsl("#446DF6")
+local c67 = hsl("#4059AD")
+local c68 = hsl("#6B9AC4")
+local c69 = hsl("#97D8C4")
+local c70 = hsl("#EFF2F1")
+local c71 = hsl("#F4B942")
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
+-- local c18 = hsl('#')
 --
 --
 -- local c6 = hsl("#96C5F7")
@@ -167,7 +198,7 @@ local theme = lush(function(injected_functions)
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		-- Normal({ bg = c12 }), -- Normal text
+		Normal({ bg = c0 }), -- Normal text
 		-- NormalFloat    { }, -- Normal text in floating windows.
 		-- FloatBorder    { }, -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
@@ -211,23 +242,23 @@ local theme = lush(function(injected_functions)
 		--
 		-- Uncomment and edit if you want more specific syntax highlighting.
 
-		-- Comment        { }, -- Any comment
+		Comment({ fg = c45 }), -- Any comment
 
-		Constant({ fg = c14 }), -- (*) Any constant
+		Constant({ fg = c26 }), -- (*) Any constant
 		-- String         { }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
 
-		Identifier({ fg = c14 }), -- (*) Any variable name
-		Function({ fg = c14 }), --   Function name (also: methods for classes)
+		Identifier({ fg = c49 }), -- (*) Any variable name
+		Function({ fg = c16 }), --   Function name (also: methods for classes)
 
-		Statement({ fg = c14 }), -- (*) Any statement
+		Statement({ fg = c16 }), -- (*) Any statement
 		-- Conditional    { }, --   if, then, else, endif, switch, etc.
 		-- Repeat         { }, --   for, do, while, etc.
 		-- Label          { }, --   case, default, etc.
-		Operator({ fg = c14 }), --   "sizeof", "+", "*", etc.
+		Operator({ fg = c42 }), --   "sizeof", "+", "*", etc.
 		-- Keyword        { }, --   any other keyword
 		-- Exception      { }, --   try, catch, throw
 
@@ -237,15 +268,15 @@ local theme = lush(function(injected_functions)
 		-- Macro          { }, --   Same as Define
 		-- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-		Type({ fg = c14 }), -- (*) int, long, char, etc.
+		Type({ fg = c54 }), -- (*) int, long, char, etc.
 		-- StorageClass   { }, --   static, register, volatile, etc.
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef        { }, --   A typedef
 
-		Special({ fg = c14 }), -- (*) Any special symbol
+		Special({ fg = c52 }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
-		Delimiter({ fg = c14 }), --   Character that needs attention
+		Delimiter({ fg = c47 }), --   Character that needs attention
 		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
@@ -347,7 +378,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@operator"          { }, -- Operator
 		-- sym"@keyword"           { }, -- Keyword
 		-- sym"@exception"         { }, -- Exception
-		-- sym"@variable"          { }, -- Identifier
+		sym("@variable")({ fg = c55 }), -- Identifier
 		-- sym"@type"              { }, -- Type
 		-- sym"@type.definition"   { }, -- Typedef
 		-- sym"@storageclass"      { }, -- StorageClass
