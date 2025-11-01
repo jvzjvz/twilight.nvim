@@ -198,7 +198,7 @@ local theme = lush(function(injected_functions)
 		-- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		-- MoreMsg        { }, -- |more-prompt|
 		-- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-		Normal({ bg = c0 }), -- Normal text
+		Normal({ bg = hsl("#000000") }), -- Normal text
 		-- NormalFloat    { }, -- Normal text in floating windows.
 		-- FloatBorder    { }, -- Border of floating windows.
 		-- FloatTitle     { }, -- Title of floating windows.
@@ -245,8 +245,8 @@ local theme = lush(function(injected_functions)
 		Comment({ fg = c45 }), -- Any comment
 
 		Constant({ fg = c26 }), -- (*) Any constant
-		-- String         { }, --   A string constant: "this is a string"
-		-- Character      { }, --   A character constant: 'c', '\n'
+		String({ fg = c57 }), --   A string constant: "this is a string"
+		Character({ fg = c57 }), --   A character constant: 'c', '\n'
 		-- Number         { }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
 		-- Float          { }, --   A floating point constant: 2.3e10
@@ -276,7 +276,7 @@ local theme = lush(function(injected_functions)
 		Special({ fg = c52 }), -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
-		Delimiter({ fg = c47 }), --   Character that needs attention
+		Delimiter({ fg = c50 }), --   Character that needs attention
 		-- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
 		-- Debug          { }, --   Debugging statements
 
