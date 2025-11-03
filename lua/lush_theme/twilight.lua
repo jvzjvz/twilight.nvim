@@ -149,6 +149,17 @@ local c460 = c46.darken(61)
 -- local c18 = hsl('#0D1317')
 -- local c18 = hsl('#')
 
+-- local gray = c45
+-- local dark_green = c53
+-- local light_green = c54
+-- local light_purple = c57
+-- local blue = c18
+-- local dark_rose = c8
+-- local pale_green = c50
+-- local pale_yellow = c55
+-- local pale_purple = c3
+-- local dark_brown = c460
+
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
