@@ -124,6 +124,33 @@ local c68 = hsl("#6B9AC4")
 local c69 = hsl("#97D8C4")
 local c70 = hsl("#EFF2F1")
 local c71 = hsl("#F4B942")
+local c72 = hsl("#BAA1A7")
+local c73 = hsl("#EDBBB4")
+
+local c74 = hsl("#A15E49")
+local c75 = hsl("#AED9E0")
+local c76 = hsl("#7B435B")
+local c77 = hsl("#32936F")
+local c78 = hsl("#E83F6F")
+local c79 = hsl("#2274A5")
+local c80 = hsl("#06D6A0")
+local c81 = hsl("#9EB7E5")
+local c82 = hsl("#648DE5")
+local c83 = hsl("#304C89")
+local c84 = hsl("#E8E5DA")
+local c85 = hsl("#0E4749")
+local c86 = hsl("#002626")
+local c87 = hsl("#A29587")
+local c88 = hsl("#6D72C3")
+local c89 = hsl("#8B9474")
+local c90 = hsl("#6CAE75")
+local c91 = hsl("#8BBD8B")
+local c92 = hsl("#C1CC99")
+local c93 = hsl("#E4D6A7")
+local c94 = hsl("#7EB09B")
+local c95 = hsl("#929982")
+local c96 = hsl("#759EB8")
+local c97 = hsl("#87B6A7")
 -- local c18 = hsl('#')
 -- local c18 = hsl('#')
 -- local c18 = hsl('#')
@@ -401,6 +428,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@exception"         { }, -- Exception
 		-- sym("@variable")({ fg = c3 }), -- Identifier
 		sym("@variable")({ fg = c55 }), -- Identifier
+		-- sym("@variable")({ fg = c55 }), -- Identifier
 		-- sym("@variable")({ fg = c3 }), -- Identifier
 		-- sym"@type"              { }, -- Type
 		-- sym"@type.definition"   { }, -- Typedef
@@ -414,6 +442,9 @@ local theme = lush(function(injected_functions)
 
 		-- cpp specific
 		sym("@module.cpp")({ fg = c54 }),
+
+		-- odin specific
+		sym("@variable.member.odin")({ fg = c87 }),
 	}
 end)
 
